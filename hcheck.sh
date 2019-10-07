@@ -7,7 +7,7 @@ echo "/bin/sh -> $MYSH"
 echo $MYSH | grep -q bash || echo "ERROR: /bin/sh does not point to bash"
 unset MYSH
 
-echo -n "Binutils: "; ld --version | head -n1 | cut -d" " -f3-
+echo -n "Binutils: "; id --version | head -n1 | cut -d" " -f3-
 bison --version | head -n1
 
 if [ -h /usr/bin/yacc ]; then
